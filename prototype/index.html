@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>翻译助手原型</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="max-w-3xl mx-auto my-10 p-8 bg-white rounded-xl shadow-md">
+        <h1 class="text-2xl font-bold text-center text-blue-600 mb-6">Chrome翻译与总结插件原型设计</h1>
+        <p class="text-center text-gray-600 mb-8">请点击以下链接查看不同页面的原型设计：</p>
+        
+        <div class="flex flex-wrap justify-center gap-4 mb-8">
+            <a href="popup.html" class="px-5 py-3 bg-blue-600 text-white rounded-full font-medium transition-all hover:bg-blue-700 hover:-translate-y-0.5 hover:shadow-md">弹出窗口界面</a>
+            <a href="translation_overlay.html" class="px-5 py-3 bg-blue-600 text-white rounded-full font-medium transition-all hover:bg-blue-700 hover:-translate-y-0.5 hover:shadow-md">翻译覆盖层</a>
+            <a href="summary_panel.html" class="px-5 py-3 bg-blue-600 text-white rounded-full font-medium transition-all hover:bg-blue-700 hover:-translate-y-0.5 hover:shadow-md">页面总结面板</a>
+            <a href="settings.html" class="px-5 py-3 bg-blue-600 text-white rounded-full font-medium transition-all hover:bg-blue-700 hover:-translate-y-0.5 hover:shadow-md">设置页面</a>
+            <a href="user_flow.html" class="px-5 py-3 bg-blue-600 text-white rounded-full font-medium transition-all hover:bg-blue-700 hover:-translate-y-0.5 hover:shadow-md">用户流程图</a>
+        </div>
+
+        <div class="bg-gray-50 p-6 rounded-lg">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">插件功能概述</h2>
+            <ul class="space-y-3">
+                <li class="flex items-start">
+                    <span class="text-blue-600 font-bold mr-2">•</span>
+                    <span>实时翻译网页内容</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-blue-600 font-bold mr-2">•</span>
+                    <span>智能总结长文本页面</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-blue-600 font-bold mr-2">•</span>
+                    <span>支持多语言切换</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-blue-600 font-bold mr-2">•</span>
+                    <span>自定义翻译和总结偏好</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-blue-600 font-bold mr-2">•</span>
+                    <span>快捷键操作支持</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="js/prototype.js"></script>
+</body>
+</html> 

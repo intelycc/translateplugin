@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>翻译助手 - 页面总结面板</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- 模拟网页内容 -->
+    <div class="max-w-3xl mx-auto my-10 p-6 bg-white rounded-lg shadow-md">
+        <div class="border-b border-gray-200 pb-4 mb-6">
+            <h1 class="text-2xl font-bold text-gray-800">示例长文章页面</h1>
+        </div>
+        <div class="space-y-6">
+            <p class="text-gray-700">这是一个示例网页，用于展示页面总结功能的工作方式。这个页面包含大量文本内容，用户可以使用总结功能快速了解页面的主要内容。</p>
+            
+            <div class="rounded-lg overflow-hidden mb-6">
+                <img src="https://source.unsplash.com/random/800x400/?artificial-intelligence" alt="人工智能图片" class="w-full h-48 object-cover">
+            </div>
+            
+            <div>
+                <h2 class="text-xl font-semibold text-gray-800 mb-3">人工智能简介</h2>
+                <p class="text-gray-700 mb-4">人工智能（AI）是计算机科学的一个分支，它致力于创造能够模拟人类智能的机器。人工智能研究包括机器学习、自然语言处理、计算机视觉、专家系统等多个领域。</p>
+                
+                <p class="text-gray-700 mb-4">机器学习是人工智能的一个核心领域，它使计算机能够从数据中学习，而无需显式编程。深度学习是机器学习的一个子集，它使用多层神经网络来分析各种因素。</p>
+            </div>
+            
+            <div>
+                <h2 class="text-xl font-semibold text-gray-800 mb-3">人工智能的应用</h2>
+                <p class="text-gray-700 mb-4">人工智能已经在许多领域得到了广泛应用，包括医疗诊断、自动驾驶汽车、语音识别、推荐系统、金融分析等。随着技术的不断发展，人工智能的应用范围还在不断扩大。</p>
+                
+                <p class="text-gray-700 mb-4">在医疗领域，人工智能可以帮助医生分析医学图像，识别疾病模式，并提供治疗建议。在金融领域，人工智能可以用于欺诈检测、风险评估和算法交易。</p>
+            </div>
+            
+            <div>
+                <h2 class="text-xl font-semibold text-gray-800 mb-3">人工智能的未来发展</h2>
+                <p class="text-gray-700 mb-4">随着计算能力的增强和算法的改进，人工智能技术正在迅速发展。未来，我们可能会看到更多的通用人工智能系统，这些系统能够执行各种任务，而不仅仅是专门设计的特定任务。</p>
+                
+                <p class="text-gray-700">然而，人工智能的发展也带来了许多伦理和社会问题，如隐私保护、就业影响、算法偏见等。这些问题需要社会各界共同关注和解决。</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 页面总结面板 -->
+    <div class="fixed right-0 top-0 h-screen w-[400px] bg-white shadow-lg flex flex-col z-50">
+        <div class="bg-blue-600 text-white px-4 py-3 flex justify-between items-center">
+            <div class="font-medium">页面总结</div>
+            <div class="cursor-pointer close-button hover:text-blue-200 text-xl leading-none">×</div>
+        </div>
+        
+        <div class="flex-1 p-5 overflow-y-auto">
+            <div class="text-sm text-gray-500 border-b border-gray-200 pb-4 mb-4">
+                <div class="font-medium text-gray-700 mb-1">来源: 示例长文章页面</div>
+                <div>生成时间: 2023年6月15日 15:30</div>
+            </div>
+            
+            <div class="flex justify-between items-center border-b border-gray-200 pb-4 mb-6">
+                <div class="flex space-x-2">
+                    <span class="px-3 py-1 rounded-full bg-blue-600 text-white text-sm cursor-pointer">简短</span>
+                    <span class="px-3 py-1 rounded-full bg-gray-200 text-gray-700 text-sm cursor-pointer hover:bg-gray-300">中等</span>
+                    <span class="px-3 py-1 rounded-full bg-gray-200 text-gray-700 text-sm cursor-pointer hover:bg-gray-300">详细</span>
+                </div>
+                <select class="bg-gray-100 border-0 rounded py-1 px-2 text-sm focus:ring-1 focus:ring-blue-300 focus:outline-none">
+                    <option value="zh">中文</option>
+                    <option value="en">英文</option>
+                    <option value="ja">日文</option>
+                    <option value="ko">韩文</option>
+                </select>
+            </div>
+            
+            <div class="space-y-6 mb-8">
+                <div>
+                    <h3 class="text-blue-600 font-medium mb-2">核心要点</h3>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <li>人工智能是计算机科学分支，致力于创造模拟人类智能的机器</li>
+                        <li>机器学习是AI的核心领域，使计算机能从数据中学习</li>
+                        <li>AI广泛应用于医疗、自动驾驶、语音识别等领域</li>
+                        <li>AI发展带来伦理和社会问题，如隐私保护和就业影响</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-blue-600 font-medium mb-2">总结内容</h3>
+                    <p class="text-gray-700">这篇文章介绍了人工智能的基本概念、应用领域和未来发展。人工智能是计算机科学的一个分支，通过机器学习等技术使计算机能够模拟人类智能。目前，AI已在医疗、自动驾驶、金融等多个领域得到应用。随着技术发展，AI将继续进步，但同时也带来了隐私、就业和算法偏见等社会问题需要解决。</p>
+                </div>
+            </div>
+            
+            <div class="flex flex-wrap gap-2">
+                <button class="bg-blue-600 text-white py-2 px-4 rounded text-sm hover:bg-blue-700 transition-colors">复制总结</button>
+                <button class="bg-blue-600 text-white py-2 px-4 rounded text-sm hover:bg-blue-700 transition-colors">翻译总结</button>
+                <button class="bg-blue-600 text-white py-2 px-4 rounded text-sm hover:bg-blue-700 transition-colors">保存总结</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="text-center my-8">
+        <a href="index.html" class="text-blue-600 hover:underline">返回原型首页</a>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 为关闭按钮添加点击事件
+            const closeButton = document.querySelector('.close-button');
+            if (closeButton) {
+                closeButton.addEventListener('click', function() {
+                    const panel = document.querySelector('.fixed');
+                    if (panel) {
+                        panel.style.display = 'none';
+                    }
+                });
+            }
+            
+            // 为总结长度选项添加点击事件
+            const lengthOptions = document.querySelectorAll('.rounded-full');
+            lengthOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    // 移除所有选项的活跃状态
+                    lengthOptions.forEach(opt => {
+                        opt.classList.remove('bg-blue-600', 'text-white');
+                        opt.classList.add('bg-gray-200', 'text-gray-700', 'hover:bg-gray-300');
+                    });
+                    
+                    // 为当前点击的选项添加活跃状态
+                    this.classList.remove('bg-gray-200', 'text-gray-700', 'hover:bg-gray-300');
+                    this.classList.add('bg-blue-600', 'text-white');
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>翻译助手 - 弹出窗口</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans p-4">
+    <div class="w-[350px] bg-white rounded-lg shadow-md overflow-hidden">
+        <!-- 弹出窗口头部 -->
+        <div class="bg-blue-600 text-white p-4 flex justify-between items-center">
+            <h2 class="text-lg font-semibold">翻译助手</h2>
+            <div class="header-controls">
+                <a href="settings.html" title="设置" class="text-white text-xl">⚙️</a>
+            </div>
+        </div>
+        
+        <!-- 标签栏 -->
+        <div class="flex border-b border-gray-200">
+            <div class="tab active w-1/2 py-3 text-center font-medium cursor-pointer border-b-2 border-blue-600 text-blue-600" data-tab="translate-tab">翻译</div>
+            <div class="tab w-1/2 py-3 text-center font-medium cursor-pointer hover:bg-gray-50" data-tab="summary-tab">总结</div>
+        </div>
+        
+        <div class="p-4">
+            <!-- 翻译标签页内容 -->
+            <div id="translate-tab" class="tab-content">
+                <div class="mb-4">
+                    <div class="flex items-center justify-between">
+                        <select class="language-select source-language w-5/12 p-2 border border-gray-300 rounded">
+                            <option value="auto">自动检测</option>
+                            <option value="zh">中文</option>
+                            <option value="en">英文</option>
+                            <option value="ja">日文</option>
+                            <option value="ko">韩文</option>
+                            <option value="fr">法文</option>
+                            <option value="de">德文</option>
+                        </select>
+                        <span class="language-switch text-xl text-gray-500">⇄</span>
+                        <select class="language-select target-language w-5/12 p-2 border border-gray-300 rounded">
+                            <option value="zh">中文</option>
+                            <option value="en">英文</option>
+                            <option value="ja">日文</option>
+                            <option value="ko">韩文</option>
+                            <option value="fr">法文</option>
+                            <option value="de">德文</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <div class="mb-2">
+                        <textarea class="text-to-translate w-full p-3 border border-gray-300 rounded h-24 resize-none" placeholder="输入要翻译的文本或选择网页内容..."></textarea>
+                    </div>
+                    <div class="p-3 bg-gray-50 rounded min-h-[80px]">
+                        <div class="translated-text text-gray-700">翻译结果将显示在这里...</div>
+                    </div>
+                </div>
+                
+                <div class="flex gap-2 mb-4">
+                    <button class="translate-button flex-1 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors">翻译</button>
+                    <button class="translate-page-button flex-1 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors">翻译当前页面</button>
+                </div>
+                
+                <div class="flex justify-around pt-3 border-t border-gray-200">
+                    <div class="flex flex-col items-center cursor-pointer hover:text-blue-600">
+                        <span class="text-xl mb-1">🔊</span>
+                        <span class="text-sm">朗读</span>
+                    </div>
+                    <div class="flex flex-col items-center cursor-pointer hover:text-blue-600">
+                        <span class="text-xl mb-1">📋</span>
+                        <span class="text-sm">复制</span>
+                    </div>
+                    <div class="flex flex-col items-center cursor-pointer hover:text-blue-600">
+                        <span class="text-xl mb-1">⭐</span>
+                        <span class="text-sm">收藏</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 总结标签页内容 -->
+            <div id="summary-tab" class="tab-content hidden">
+                <div class="space-y-4 mb-4">
+                    <div class="flex items-center justify-between">
+                        <label class="text-gray-700">总结长度：</label>
+                        <select class="summary-length w-7/12 p-2 border border-gray-300 rounded">
+                            <option value="short">简短</option>
+                            <option value="medium" selected>中等</option>
+                            <option value="long">详细</option>
+                        </select>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <label class="text-gray-700">总结语言：</label>
+                        <select class="language-select summary-language w-7/12 p-2 border border-gray-300 rounded">
+                            <option value="zh">中文</option>
+                            <option value="en">英文</option>
+                            <option value="ja">日文</option>
+                            <option value="ko">韩文</option>
+                            <option value="fr">法文</option>
+                            <option value="de">德文</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <button class="summary-button w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors">总结当前页面</button>
+                </div>
+                
+                <div class="mt-6">
+                    <h3 class="text-base font-medium text-gray-800 mb-3">最近总结</h3>
+                    <div class="space-y-2">
+                        <div class="p-3 bg-gray-50 rounded hover:bg-gray-100 cursor-pointer">
+                            <div class="font-medium">维基百科 - 人工智能</div>
+                            <div class="text-sm text-gray-500">今天 14:30</div>
+                        </div>
+                        <div class="p-3 bg-gray-50 rounded hover:bg-gray-100 cursor-pointer">
+                            <div class="font-medium">谷歌开发者文档</div>
+                            <div class="text-sm text-gray-500">昨天 09:15</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="text-center mt-6">
+        <a href="index.html" class="text-blue-600 hover:underline">返回原型首页</a>
+    </div>
+    
+    <script>
+        // 标签页切换逻辑
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // 移除所有标签的active类
+                    tabs.forEach(t => {
+                        t.classList.remove('active', 'border-blue-600', 'text-blue-600');
+                        t.classList.add('hover:bg-gray-50');
+                    });
+                    
+                    // 为当前点击的标签添加active类
+                    this.classList.add('active', 'border-b-2', 'border-blue-600', 'text-blue-600');
+                    this.classList.remove('hover:bg-gray-50');
+                    
+                    // 获取对应的内容区域
+                    const tabId = this.getAttribute('data-tab');
+                    const tabContents = document.querySelectorAll('.tab-content');
+                    
+                    // 隐藏所有内容区域
+                    tabContents.forEach(content => {
+                        content.classList.add('hidden');
+                    });
+                    
+                    // 显示当前标签对应的内容区域
+                    document.getElementById(tabId).classList.remove('hidden');
+                });
+            });
+            
+            // 模拟翻译功能
+            const textToTranslate = document.querySelector('.text-to-translate');
+            const translatedText = document.querySelector('.translated-text');
+            
+            if (textToTranslate && translatedText) {
+                textToTranslate.addEventListener('input', function() {
+                    // 模拟翻译延迟
+                    setTimeout(() => {
+                        // 简单模拟翻译效果
+                        translatedText.textContent = '已翻译: ' + this.value;
+                    }, 500);
+                });
+            }
+        });
+    </script>
+</body>
+</html> 
