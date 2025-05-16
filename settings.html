@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>翻译助手 - 设置</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="max-w-2xl mx-auto my-10 p-8 bg-white rounded-xl shadow-md">
+        <div class="text-center mb-8">
+            <h1 class="text-2xl font-bold text-blue-600 mb-2">翻译助手设置</h1>
+            <p class="text-gray-500">自定义您的翻译和总结偏好</p>
+        </div>
+        
+        <div class="mb-8 pb-6 border-b border-gray-200">
+            <h2 class="text-lg font-semibold text-gray-800 mb-4">翻译设置</h2>
+            
+            <div class="space-y-4">
+                <div>
+                    <label for="default-source-language" class="block text-gray-700 font-medium mb-2">默认源语言</label>
+                    <select id="default-source-language" class="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none">
+                        <option value="auto">自动检测</option>
+                        <option value="zh">中文</option>
+                        <option value="en">英文</option>
+                        <option value="ja">日文</option>
+                        <option value="ko">韩文</option>
+                        <option value="fr">法文</option>
+                        <option value="de">德文</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="default-target-language" class="block text-gray-700 font-medium mb-2">默认目标语言</label>
+                    <select id="default-target-language" class="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none">
+                        <option value="zh" selected>中文</option>
+                        <option value="en">英文</option>
+                        <option value="ja">日文</option>
+                        <option value="ko">韩文</option>
+                        <option value="fr">法文</option>
+                        <option value="de">德文</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="translation-engine" class="block text-gray-700 font-medium mb-2">翻译引擎</label>
+                    <select id="translation-engine" class="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none">
+                        <option value="google">Google 翻译</option>
+                        <option value="baidu">百度翻译</option>
+                        <option value="deepl">DeepL</option>
+                        <option value="microsoft">Microsoft 翻译</option>
+                    </select>
+                </div>
+                
+                <div class="flex items-center">
+                    <input type="checkbox" id="auto-translate" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500" checked>
+                    <label for="auto-translate" class="ml-2 text-gray-700">自动翻译选中的文本</label>
+                </div>
+                
+                <div class="flex items-center">
+                    <input type="checkbox" id="show-original" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500" checked>
+                    <label for="show-original" class="ml-2 text-gray-700">显示原文</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mb-8 pb-6 border-b border-gray-200">
+            <h2 class="text-lg font-semibold text-gray-800 mb-4">总结设置</h2>
+            
+            <div class="space-y-4">
+                <div>
+                    <label for="default-summary-length" class="block text-gray-700 font-medium mb-2">默认总结长度</label>
+                    <select id="default-summary-length" class="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none">
+                        <option value="short">简短</option>
+                        <option value="medium" selected>中等</option>
+                        <option value="long">详细</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="default-summary-language" class="block text-gray-700 font-medium mb-2">默认总结语言</label>
+                    <select id="default-summary-language" class="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none">
+                        <option value="zh" selected>中文</option>
+                        <option value="en">英文</option>
+                        <option value="ja">日文</option>
+                        <option value="ko">韩文</option>
+                    </select>
+                </div>
+                
+                <div class="flex items-center">
+                    <input type="checkbox" id="include-bullet-points" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500" checked>
+                    <label for="include-bullet-points" class="ml-2 text-gray-700">包含要点列表</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mb-8 pb-6 border-b border-gray-200">
+            <h2 class="text-lg font-semibold text-gray-800 mb-4">快捷键设置</h2>
+            
+            <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                    <label for="shortcut-translate" class="text-gray-700 font-medium">翻译选中文本</label>
+                    <div class="flex items-center">
+                        <input type="text" id="shortcut-translate" value="Alt+T" class="p-2 border border-gray-300 rounded w-24 text-center mr-2" readonly>
+                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-2 py-1 rounded text-sm transition-colors">编辑</button>
+                    </div>
+                </div>
+                
+                <div class="flex items-center justify-between">
+                    <label for="shortcut-summary" class="text-gray-700 font-medium">总结当前页面</label>
+                    <div class="flex items-center">
+                        <input type="text" id="shortcut-summary" value="Alt+S" class="p-2 border border-gray-300 rounded w-24 text-center mr-2" readonly>
+                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-2 py-1 rounded text-sm transition-colors">编辑</button>
+                    </div>
+                </div>
+                
+                <div class="flex items-center justify-between">
+                    <label for="shortcut-toggle" class="text-gray-700 font-medium">显示/隐藏翻译面板</label>
+                    <div class="flex items-center">
+                        <input type="text" id="shortcut-toggle" value="Alt+Q" class="p-2 border border-gray-300 rounded w-24 text-center mr-2" readonly>
+                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-2 py-1 rounded text-sm transition-colors">编辑</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mb-8">
+            <h2 class="text-lg font-semibold text-gray-800 mb-4">高级设置</h2>
+            
+            <div class="space-y-4">
+                <div class="flex items-center">
+                    <input type="checkbox" id="enable-context-menu" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                    <label for="enable-context-menu" class="ml-2 text-gray-700">在右键菜单中显示翻译选项</label>
+                </div>
+                
+                <div class="flex items-center">
+                    <input type="checkbox" id="auto-detect-language" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500" checked>
+                    <label for="auto-detect-language" class="ml-2 text-gray-700">自动检测页面语言</label>
+                </div>
+                
+                <div class="flex items-center">
+                    <input type="checkbox" id="save-history" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500" checked>
+                    <label for="save-history" class="ml-2 text-gray-700">保存翻译和总结历史</label>
+                </div>
+                
+                <div>
+                    <label for="history-limit" class="block text-gray-700 font-medium mb-2">历史记录保存数量</label>
+                    <input type="number" id="history-limit" value="50" min="1" max="500" class="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none">
+                </div>
+            </div>
+        </div>
+        
+        <div class="flex justify-between">
+            <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded transition-colors">保存设置</button>
+            <button class="bg-gray-200 hover:bg-gray-300 text-gray-700 py-2 px-6 rounded transition-colors">恢复默认设置</button>
+        </div>
+    </div>
+    
+    <div class="text-center my-8">
+        <a href="index.html" class="text-blue-600 hover:underline">返回原型首页</a>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 为设置保存按钮添加点击事件
+            const saveSettingsButton = document.querySelector('.bg-blue-600');
+            if (saveSettingsButton) {
+                saveSettingsButton.addEventListener('click', function() {
+                    alert('设置已保存！');
+                });
+            }
+        });
+    </script>
+</body>
+</html> 
